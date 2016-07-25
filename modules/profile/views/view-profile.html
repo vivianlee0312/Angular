@@ -1,0 +1,108 @@
+<form novalidate >
+    <div class="form-group" >
+       
+            <!-- <div id='first-name' style='font-size: small;'></div> -->
+            <label>First Name:</label> 
+                    
+           <!-- Hide -->
+                <span class="edit-element animate-hide" ng-hide="edit">        
+                    {{firstName}}   
+        
+                </span>
+
+             <!-- <input required ng-model="user.username" name="username" type="text" disabled> -->
+
+           
+
+            <!-- Show -->
+            <div class="edit-element animate-hide" ng-hide="back"  >
+                <input type="text" class="form-control" name="firstName" required ng-model= "firstName" ng-show="edit"> 
+            </div>
+
+
+
+    </div>
+                    
+
+    <div class="form-group">
+        <label>Last Name:</label>  
+            <!-- Hide -->
+                 <span class="edit-element animate-hide" ng-hide="edit">        
+                    {{lastName}}   
+        
+                </span>
+
+               
+
+
+
+            <!-- Show -->
+            <div class="edit-element animate-hide" ng-hide="back" >
+                <input type="text" class="form-control" name="lastName" required ng-model="lastName" ng-show="edit"> 
+                
+           </div>
+
+    </div>
+                    
+
+    <div class="form-group">
+        <label>Username:</label>  
+        
+             {{username}}
+            
+    </div>
+                    
+
+    <div class="form-group">
+        <label>Password:</label>  
+           
+            {{password}}
+            
+    </div>
+
+   
+   <div class="buttons">
+        <div class="edit-button">
+            <div class="edit-button-detail">
+            <!-- change goCats to not true or true -->
+                <button ng-click="edit = !edit"  class="btn btn-primary btn-lg" >Edit/ Back</button>
+               
+
+            </div>
+        </div>
+
+
+        <div class="save-button">
+            <div class="save-button-detail">
+            <!-- change goCats to not true or true -->
+                <div class="save-control" ng-hide="back">
+                    <!-- <button ng-click="save = !save"  class="btn btn-primary btn-lg" ng-show="edit">Save</button> -->
+
+
+                    <!-- md-button   class="btn btn-primary btn-lg" ng-click="saveHandler()" ng-show="edit"> Save </md-button> -->
+
+                    <input type="submit" ng-click="saveHander()" value="Save">
+
+
+                </div>
+
+            
+               <!-- <a ng-show="edit"> <button ng-click="back = !back" ng-hide="back">Back to Profile</button></a> -->
+
+
+            </div>    
+        </div>
+    </div>    
+   
+
+    <!-- <button type="submit" class="btn btn-warning btn-lg" id="profileSaveBtn">Save</button> -->
+
+    <!-- <button type="submit" class="btn btn-warning btn-lg" id="profileEditBtn">Edit</button>
+    <button type="submit" class="btn btn-warning btn-lg" id="profileSaveBtn">Save</button> -->
+
+
+
+
+
+
+</form>
