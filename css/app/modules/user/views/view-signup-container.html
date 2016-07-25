@@ -1,0 +1,64 @@
+<div class="main col-sm-6 col-sm-offset-3">
+	
+
+	<form name="signupForm">
+		
+		<h1>Signup</h1>
+		<md-content class="md-no-momentum">
+
+			<md-input-container class=" md-block">
+				<label>First Name</label>
+
+      			<input required ng-model="firstName" name="firstName" type="text">
+
+	      		<div ng-messages="loginForm.firstName.$error">
+		          <div ng-message="required">Please enter a Username</div>
+		        </div>
+
+			</md-input-container>
+
+			<md-input-container class=" md-block">
+				<label>Last Name</label>
+
+      			<input required ng-model="lastName" name="lastName" type="text">
+
+	      		<div ng-messages="loginForm.lastName.$error">
+		          <div ng-message="required">Please enter a Last Name</div>
+		        </div>
+
+			</md-input-container>
+
+			<md-input-container class="md-icon-float md-block">
+				<label>Username</label>
+
+				<md-icon md-svg-src="img/man-user.svg" class="name"></md-icon>
+
+      			<input required ng-model="username" name="username" type="text">
+
+	      		<div ng-messages="loginForm.username.$error">
+		          <div ng-message="required">Please enter a Username</div>
+		        </div>
+
+			</md-input-container>
+
+			<md-input-container class="md-icon-float md-block">
+				<label>Password</label>
+
+		      	<md-icon md-svg-src="img/locked-padlock.svg"></md-icon>
+
+      			<input required ng-model="password" name="password" type="password">
+
+	      		<div ng-messages="loginForm.password.$error">
+		          <div ng-message="required">You must enter a Password</div>
+		        </div>
+			</md-input-container>
+
+			<md-button class="md-raised md-primary login-button" ng-click="signupHandler()" ng-disabled="loginForm.$pristine || loginForm.$invalid">Signup</md-button>
+		</md-content>
+
+	</form>
+
+	<hr />
+
+	<p>Already have an account? <a ui-sref="login">Login</a></p>
+</div>

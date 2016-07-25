@@ -1,0 +1,22 @@
+<table class="table table-striped">
+<thead>
+	<th>Country</th>
+	<th>Code</th>
+	<th>2014</th>
+	<th>2013</th>
+	<th>2012</th>
+	<th>2011</th>
+	<th>2010</th>
+</thead>
+<tbody>
+	<tr ng-click="setCharts(country)" ng-repeat="country in countries">
+		<td>{{country["Country Name"]}}</td>
+		<td>{{country["Country Code"]}}</td>
+		<td>{{format(country["2014 [YR2014]"])}}</td>
+		<td>{{format(country["2013 [YR2013]"])}}</td>
+		<td>{{format(country["2012 [YR2012]"])}}</td>
+		<td>{{format(country["2011 [YR2011]"])}}</td>
+		<td>{{format(country["2010 [YR2010]"])}}</td>
+	</tr>
+</tbody>
+</table>

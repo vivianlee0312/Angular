@@ -1,0 +1,44 @@
+<form name="profileForm">
+		
+		<md-content class="md-no-momentum">
+			<md-input-container class="md-icon-float md-block">
+				<label>Username</label>
+
+		      	<md-icon md-svg-src="img/locked-padlock.svg"></md-icon>
+
+      			<input required ng-model="user.username" name="username" type="text" disabled>
+
+	      		<div ng-messages="loginForm.username.$error">
+		          <div ng-message="required">Please enter a Username</div>
+		        </div>
+
+			</md-input-container>
+
+			<md-input-container class="md-icon-float md-block">
+				<label>First Name</label>
+
+		      	<md-icon md-svg-src="img/man-user.svg"></md-icon>
+
+      			<input required ng-model="user.firstName" name="firstName" type="text">
+
+	      		<div ng-messages="loginForm.firstName.$error">
+		          <div ng-message="required">You must enter a Password</div>
+		        </div>
+			</md-input-container>
+
+			<md-input-container class="md-icon-float md-block">
+				<label>Last Name</label>
+
+		      	<md-icon md-svg-src="img/man-user.svg"></md-icon>
+
+      			<input required ng-model="user.lastName" name="lastName" type="text">
+
+	      		<div ng-messages="loginForm.lastName.$error">
+		          <div ng-message="required">You must enter a Password</div>
+		        </div>
+			</md-input-container>
+
+			<md-button class="md-raised md-primary login-button" ng-click="loginHandler()" ng-disabled="loginForm.$pristine || loginForm.$invalid">Save</md-button>
+		</md-content>
+
+	</form>
