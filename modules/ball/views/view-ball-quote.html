@@ -1,0 +1,36 @@
+<div class="main col-sm-6 col-sm-offset-3">
+	<form name="quoteForm" ng-submit="saveQuotes()">
+		
+		<div layout="column" layout-padding ng-cloak>
+
+		<!-- {{quotes}} -->
+
+
+	  	<h3>My Quote List</h3>
+
+		<md-content class="md-no-momentum">
+			<md-input-container class="md-icon-float md-block" ng-repeat="quote in quotes track by $index">
+				<label>Quote {{$index}}</label>
+
+      			<input required ng-model="quotes[$index]" name="quote" type="text">
+
+	      		<!-- <div ng-messages="quoteForm.quote.$error">
+		          <div ng-message="required">Please enter a quote</div>
+		        </div> -->
+
+			</md-input-container>
+
+		
+
+
+
+
+			<input type="submit" class="md-raised md-primary save-button" value="Update" />
+		</md-content>
+
+	</form>
+
+	<hr />
+
+	
+</div>
