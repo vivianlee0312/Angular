@@ -1,0 +1,14 @@
+<form name="quotesForm">
+	<md-content class="md-no-momentum">
+
+		<md-input-container class="md-icon-float md-block" ng-repeat="quote in quotes track by $index">
+			<label>Quote #{{$index+1}}</label>
+
+  			<input ng-model="quotes[$index]" name="quote{{$index}}" type="text">
+		</md-input-container>
+
+		
+		<md-button class="md-raised md-primary login-button" ng-click="saveQuotes()">Save</md-button>
+	</md-content>
+
+</form>
